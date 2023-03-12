@@ -8,27 +8,21 @@
 import React from 'react';
 import {
     SafeAreaView,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
     Text,
-    useColorScheme,
     View,
 } from 'react-native';
 import styles from "./Styles/MainComponent";
 import Bird from "./Components/Bird";
+import Piller from "./Components/Piller";
 
 const App = () => {
     return (
-        <>
-            <SafeAreaView style={styles.mainDiv}>
-                <View>
-                    <Text>Hello Abhishek</Text>
-                </View>
-                <Bird />
-            </SafeAreaView>
-        </>
-    )
+        <SafeAreaView style={styles.mainDiv}>
+            <Bird />
+            <Piller />
+            <View style={{...styles.piller,backgroundColor:"red"}}></View>
+        </SafeAreaView>
+    );
 }
 
 export default App;
