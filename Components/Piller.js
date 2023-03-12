@@ -2,9 +2,9 @@ import {View} from "react-native";
 import React from "react";
 import styles from "../Styles/MainComponent";
 
-const Piller = () =>{
+const Piller = ({color}) =>{
     return(
-        <View style={styles.piller}>
+        <View style={{...styles.piller,backgroundColor:`${color}`}}>
 
         </View>
     );
