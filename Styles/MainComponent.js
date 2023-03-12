@@ -4,20 +4,18 @@ const styles = StyleSheet.create({
     mainDiv : {
         backgroundColor: "white",
         flex:1,
+        alignItems:"center",
+        justifyContent:"center",
+        flexDirection:"row"
     },
     piller :{
         width: 40,
-        flex: 2,
+        position: "absolute",
         backgroundColor: "green"
     },
     bird :{
         position: "absolute",
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0,
-        justifyContent: "center",
-        alignItems: "center"
+        zIndex:2
     }
 })
 
