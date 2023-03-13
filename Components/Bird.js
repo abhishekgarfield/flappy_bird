@@ -5,7 +5,7 @@ import {faKiwiBird, } from "@fortawesome/free-solid-svg-icons";
 import styles from "../Styles/MainComponent";
 const Bird = ({color,top}) => {
        return(
-        <View style={{...styles.bird}}>
+        <View style={{...styles.bird}}> 
             <FontAwesomeIcon icon={faKiwiBird} size={50} color={color}/>
         </View>
     )
