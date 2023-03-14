@@ -17,6 +17,7 @@ const App = () => {
     const [secondPillarHeight, setSecondPillerHeight] = useState((height/2)- 50)
     const [pillerLeft,setPillerLeft] =useState(width/2 -20)
     const [birdPosition,setBirdPosition] = useState(height/2)
+    const [gameOver,setGameOver] = useState(false)
 
     const setPillerHeight = () => {
         let gap = (20 * (Math.floor(Math.random() * 6) + 2))
@@ -30,22 +31,29 @@ const App = () => {
     let pillerTimer
 
     useEffect(() => {
-        if (pillerLeft > -40 ) {
+        if (!gameOver)
+        {
+        if (pillerLeft > -40) {
             pillerTimer = setInterval(() => {
-                setPillerLeft(() => pillerLeft - 3)
+                setPillerLeft(() => pillerLeft - 1)
                 if (birdPosition > 0) {
                     birdFall()
                 }
+                if ((birdPosition <= secondPillarHeight || birdPosition <= firstPillarHeight) && ((pillerLeft <= (width / 2) + 20) && (pillerLeft >= (width / 2) - 60))) {
+                    setGameOver(true)
+                }
             }, 30)
             return () => clearInterval(pillerTimer)
-        }
-        else
-        {
+        } else {
             let colors = changeColor()
             setPillerColor(colors[0]);
             setBirdColor(colors[1]);
             setPillerHeight()
-            setPillerLeft(width -20)
+            setPillerLeft(width - 20)
+
+        }}else
+        {
+            return () => clearInterval(pillerTimer)
         }
 
 
