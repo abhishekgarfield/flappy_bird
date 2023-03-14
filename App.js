@@ -42,7 +42,7 @@ const App = () => {
                 if ((birdPosition <= secondPillarHeight || birdPosition <= firstPillarHeight) && ((pillerLeft <= (width / 2) + 20) && (pillerLeft >= (width / 2) - 60))) {
                     setGameOver(true)
                 }
-            }, 30)
+            }, 10)
             return () => clearInterval(pillerTimer)
         } else {
             let colors = changeColor()
