@@ -59,7 +59,7 @@ const App = () => {
 
     })
 
-    return (
+    return ( 
         <SafeAreaView style={styles.mainDiv}>
             <Bird color={birdColor} bottom={birdPosition}/>
             <Piller color={pillerColor} height={firstPillarHeight} alignValue={"flex-start"} pillerLeft={pillerLeft}/>
