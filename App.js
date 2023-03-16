@@ -60,7 +60,7 @@ const App = () => {
     })
 
     return ( 
-        <SafeAreaView style={styles.mainDiv}>
+        <SafeAreaView style={styles.mainDiv}>  
             <Bird color={birdColor} bottom={birdPosition}/>
             <Piller color={pillerColor} height={firstPillarHeight} alignValue={"flex-start"} pillerLeft={pillerLeft}/>
             <Piller color={pillerColor} height={secondPillarHeight} alignValue={"flex-end"} pillerLeft={pillerLeft}  />
