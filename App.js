@@ -57,7 +57,7 @@ const App = () => {
         }
 
 
-    })
+    }) 
 
     return ( 
         <SafeAreaView style={styles.mainDiv}>  
